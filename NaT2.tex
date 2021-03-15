@@ -1,0 +1,82 @@
+\documentclass[a4paper, twocolumn]{article}
+
+%
+% Packages
+%
+
+%% styling for this document
+\usepackage{tex/docstyle}
+
+%% Test
+\usepackage{blindtext}
+
+%
+% Metadata
+%
+
+\title{Nachrichtentechnik 2}
+\author{
+  Naoki Pross
+}
+\date{\today}
+
+%
+% Macros
+%
+
+\newcommand{\overbar}[1]{\mkern 1.5mu\overline{\mkern-1.5mu#1\mkern-1.5mu}\mkern 1.5mu}
+
+%
+% Document
+%
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Probability and Random Variables}
+\begin{defn}[Random experiment]
+  The experiment is called \emph{random} if its outcome cannot be predicted.
+\end{defn}
+
+\begin{defn}[Sample space and events]
+  The set of all possible outcomes of a random experiment is called the
+  \emph{sample space} \(S\). An \(\lambda \in S\) is called a \emph{sample
+  point}. A set of sample points \(A \subset S\) is called an \emph{event}.
+\end{defn}
+
+\begin{defn}[Auxiliary definitions]
+  The \emph{complement} of an event \(A\) is \(\overbar{A} = \{\lambda \in S :
+  \lambda \notin A\}\). The \emph{union} of two events \(A\) and \(B\) is
+  \(A\cup B = \{\lambda \in S : \lambda \in A \vee \lambda \in B\}\), similarly
+  the \emph{intersection} is \(A\cap B = \{\lambda \in S : \lambda \in A \wedge
+  \lambda \in B\}\).
+\end{defn}
+
+% TODO: rest of chapter
+
+\section{Random Processes}
+
+Previously we defined a random variable as a function \(X: S \to
+E\subset\mathbb{R}\) that assigns a \emph{number} to each event. We will now
+extend this concept.
+
+\begin{defn}[Random Process]
+  For a random experiment with sample space \(S\), we assign to every event
+  \(\lambda \in S\) a \emph{function} of time. The \emph{random process} \(X(t,
+  \lambda)\) is effectively \(X : \mathbb{R} \times S \to E \subset\mathbb{R}\).
+\end{defn}
+
+\begin{remark}
+  Notice that for a fixed \(\lambda_i\), \(X(t,\lambda_i) = X(t)\) is indeed a
+  function of time. Conversely for a fixed time \(t_i\), \(X(t_i, \lambda)\) is
+  a a random variable. Only when both a \(\lambda_i\) and \(t_i\) are given
+  \(X(t_i, \lambda_i)\) is a number.
+\end{remark}
+
+\begin{defn}[Distribution]
+
+
+\end{defn}
+
+\end{document}
