@@ -28,6 +28,16 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 
+\PassOptionsToPackage{scaled=1.075,ncf,vvarbb}{newtxmath}
+\RequirePackage{newtxmath}
+
+% change list styles
+\RequirePackage{enumitem}
+\setlist[description]{
+  format = {\normalfont\itshape}
+}
+
+% theorem style
 \newtheoremstyle{natzf} % name of the style to be used
   {\topsep}
   {\topsep}
@@ -43,9 +53,8 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{lemma}{Lemma}
 \newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
 
-\PassOptionsToPackage{scaled=1.075,ncf,vvarbb}{newtxmath}
-\RequirePackage{newtxmath}
 
 %% Link colors
 \RequirePackage{xcolor}
@@ -107,7 +116,7 @@
 \newcommand{\makefigure}[2][]{
   \begin{center}\begin{tikzpicture}
     \draw[
-      draw=GridColor, fill=white
+      dashed, draw=GridColor, fill=white
     ] (0, 0) rectangle (\linewidth, #2);
     \node[
       text=GridColor, anchor=north west
